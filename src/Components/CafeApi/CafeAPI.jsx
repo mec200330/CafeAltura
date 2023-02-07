@@ -13,6 +13,13 @@ const CafeAPI = (props) => {
     const [fetching, setFeching] = useState(true)
     const {coffeP, showCoffeP} = props
 
+    const orderArray =()=>{
+        const newCoffe=[...coffe]
+        const newArray = newCoffe.sort((a,b)=>b.price-a.price, 0)
+        setCoffe(newArray)
+        console.log(newArray)
+    }
+
 useEffect(()=>{
     axios
     .get(apiURL)
@@ -35,21 +42,28 @@ if (coffe.price===9 && coffe.available === true){
         <article className='test1 col'key={coffe.id} >
           <img  src={coffe.img_url}/>         
          <a className='bottom3' >{coffe.brand}</a>
-         <p>{coffe.price.toFixed(2)}</p>
+         <p>{coffe.price.toFixed(2)}€</p>
          <Bottom clasebotton='bottom4' nombrebotton='Añadir'></Bottom>
          </article>
-    
+      
     )
 }
 })}
 
 {!isShortened && coffe.map((coffe)=>{
+    const sortPrice=()=>{
+        const newArray= [...coffe]
+        const orderCoffe = newArray.sort((a,b)=>b.price-a.price,0)
+        setCoffe(orderCoffe)
+    
+    }
 
     return( 
+        
         <article className='col test1'key={coffe.id}>
          <img className='bagcoffeimg' src={coffe.img_url}/>         
-         <h3 className='bottom3' >{coffe.brand}</h3>
-         <p>{coffe.price.toFixed(2)}</p>
+         <a className='bottom3' >{coffe.brand}</a>
+         <p>{coffe.price.toFixed(2)}€</p>
          <Bottom clasebotton='bottom4' nombrebotton='Añadir'></Bottom>
         </article>
     

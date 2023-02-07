@@ -12,7 +12,6 @@ const Card =()=>{
     <CafeAPI isShortened={true}/>
     {/* <h1>HOLA</h1>
     <CafeAPI/> */}
-
 <div className="row justify-content-center">
  <Link to='/shop' className="link1 col-3 ccb">Ver todo <img src={imgarrow}></img> </Link>
 </div>
