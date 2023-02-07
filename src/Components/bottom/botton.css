@@ -1,0 +1,48 @@
+ /* boton verde */
+ .bottom1{
+    text-decoration: none;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    background-color: #1F1815;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    }
+    .bottom2{
+        text-decoration: none;
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        padding: 12px 24px;
+        background-color: #2A5B45;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+
+.bottom4{
+        text-decoration: none;
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        background-color: rgba(42, 91, 69, 0.7);
+        width: 60px;
+        height: 32px;
+        border-radius: 4px;
+        gap: 8px;
+        padding: 8px;
+        }
+ .bottom4:hover{
+            background-color: #2A5B45;
+        
+        }

@@ -1,0 +1,47 @@
+.contact{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 24px;
+height: 552px;
+background: #E3DED7;
+opacity: 0.9;
+
+}
+
+.contacth3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #111827;
+    width: 588px;
+    height: 24px;
+    padding-top: 116px;
+    padding-bottom: 26px;
+    
+}
+
+.contactp{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6B7280;
+    width: 588px;
+    height: 37px;
+}
+
+.contacta{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6B7280;
+    width: 588px;
+    height: 24px;
+    text-decoration: none;
+} 

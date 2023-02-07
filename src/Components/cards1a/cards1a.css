@@ -1,0 +1,35 @@
+.cardsp{
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    line-height: 91%;
+    text-align: center;
+}
+.cardsh3{
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    line-height: 106%;
+    text-align: center;
+}
+.cardsimg{
+    width: 64px;
+    height: 64px;
+    padding: 12px;
+}
+.cardsarticle{
+    display: flex;
+    padding: 24px;
+    gap: 16px;
+   justify-content: center;
+   flex-direction: column;
+    width: 316px;
+    height: 232px;
+    background-color: white;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #F7F5F3;
+}

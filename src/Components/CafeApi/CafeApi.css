@@ -1,0 +1,35 @@
+.test1{
+    
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: white;
+    height: 391.39px;
+    width: 282px;
+    align-items: center;
+    justify-content:center;
+    padding: 24px;
+    gap: 24px;
+    border: 1px solid #E3DED7;
+    box-sizing: border-box;
+    margin-left: 24px;
+    margin-right: 10px;
+    transition: .1s;
+    
+
+}
+.bagcoffe article:hover{
+    border: 2px solid #E3DED7;
+    border-radius: 8px;
+    background-color: #F7F5F3;
+}
+.bottom4:hover{
+    background-color: #2A5B45;
+
+}
+
+.bagcoffeimg{
+    
+    width: 219.39px;
+    height: 219.39px;
+}
