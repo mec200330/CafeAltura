@@ -1,72 +1,67 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import Bottom from "../bottom/Bottom";
 import './CafeApi.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import { useContext } from "react";
+import { DataContext } from "../Context/DataContext";
 
-const apiURL = 'https://cafe-de-altura-api.vercel.app/api/products'
 
 const CafeAPI = (props) => {
+const {coffe, fetching, cart, setCart}= useContext (DataContext)
 
-    const {isShortened} = props
-    const [coffe, setCoffe] = useState([])
-    const [fetching, setFeching] = useState(true)
-    const {coffeP, showCoffeP} = props
+const buyProducts = (add) =>{
 
-    const orderArray =()=>{
-        const newCoffe=[...coffe]
-        const newArray = newCoffe.sort((a,b)=>b.price-a.price, 0)
-        setCoffe(newArray)
-        console.log(newArray)
+   const coffeeObj = {
+        ...add,
+        quantity: 1
     }
 
-useEffect(()=>{
-    axios
-    .get(apiURL)
-    .then((response)=>{
-        setCoffe(response.data.products)
-        setFeching(false)
+    console.log(coffeeObj);
+ 
+const repeat = cart.some((repeatProduct)=> repeatProduct._id === coffeeObj._id)
+console.log(repeat); 
+if(repeat){
+    cart.map((prod)=>{
+        if(prod._id===coffeeObj._id){
+            prod.quantity++
+        }
     })
-    .catch(err=> console.error(err))
-}, [])
+}else {
+    setCart([...cart, coffeeObj])
+}
+console.log(cart);
+}
 
 
 
+    const {isShortened} = props
 return(
 
     <div className="bagcoffe row">
 {fetching && 'Loading'} 
-{isShortened && coffe.map((coffe)=>{
-if (coffe.price===9 && coffe.available === true){
+{isShortened && coffe.map((coff)=>{
+   
+if (coff.price===9 && coff.available === true){
     return( 
-        <article className='test1 col'key={coffe.id} >
-          <img  src={coffe.img_url}/>         
-         <a className='bottom3' >{coffe.brand}</a>
-         <p>{coffe.price.toFixed(2)}€</p>
-         <Bottom clasebotton='bottom4' nombrebotton='Añadir'></Bottom>
+        <article className='test1 col'key={coff._id} >
+          <img  src={coff.img_url}/>         
+         <a className='bottom3' >{coff.brand}</a>
+         <p>{coff.price.toFixed(2)}€</p>
+        
+         <Bottom comprar={()=>buyProducts(coff)} clasebotton='bottom4' nombrebotton='Añadir'></Bottom>
+         
          </article>
-      
     )
 }
 })}
-
-{!isShortened && coffe.map((coffe)=>{
-    const sortPrice=()=>{
-        const newArray= [...coffe]
-        const orderCoffe = newArray.sort((a,b)=>b.price-a.price,0)
-        setCoffe(orderCoffe)
-    
-    }
-
+{!isShortened && coffe.map((coff)=>{
+     
     return( 
-        
-        <article className='col test1'key={coffe.id}>
-         <img className='bagcoffeimg' src={coffe.img_url}/>         
-         <a className='bottom3' >{coffe.brand}</a>
-         <p>{coffe.price.toFixed(2)}€</p>
-         <Bottom clasebotton='bottom4' nombrebotton='Añadir'></Bottom>
+        <article className='col test1'key={coff._id}>
+         <img className='bagcoffeimg' src={coff.img_url}/>         
+         <a className='bottom3' >{coff.brand}</a>
+         <p>{coff.price.toFixed(2)}€</p>
+         <Bottom  comprar={()=>buyProducts(coff)} clasebotton='bottom4' nombrebotton='Añadir'></Bottom>
         </article>
-    
     )
 
 })}

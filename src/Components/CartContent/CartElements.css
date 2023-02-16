@@ -1,0 +1,53 @@
+.modal-container{
+    
+    display: flex;
+    flex-direction: column;                 
+    align-content: center;
+    position:flex;
+    font-family: outfit;
+    color: #000000;
+    /* width: 700px; */
+    gap: 2px;
+    background: rgb(245, 243, 241);
+    padding: 0 18px;
+    top: 105px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    z-index: 1;
+    font-family: outfit;
+   
+    width: auto;
+    
+    /* display: none; */
+}
+.items{
+  
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px rgb(26, 97, 8);
+    
+}
+
+.delete-product{
+    cursor: pointer;
+    top: -4px;
+    right: 1px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    padding: 1px 6px;
+    border-radius: 50%;
+    text-decoration: solid;
+    font-weight: 900;
+    font-size: 12px;
+}
+.sumar{
+    cursor: pointer;
+}
+.restar{
+    cursor: pointer;
+}
+.modal-container img{
+    display:list-item;
+    align-items: center;
+  width: 90px;
+}
