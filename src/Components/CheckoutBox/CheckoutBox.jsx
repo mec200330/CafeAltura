@@ -1,13 +1,14 @@
-import { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { useContext } from "react"
 import { DataContext } from '../../Context/DataContext'
-import './BoxCart.css'
+import { Link } from 'react-router-dom'
 
-const BoxCart = ({send})=>{
+
+
+const CheckoutBox =({send})=>{
+    
     const {total, freeSend} = useContext(DataContext)
-
     return(
-        <div className="totalCart">
+<div className="totalCart">
             <div className="totalDetails">
                 <h3>Total del carrito</h3>
                 <hr />
@@ -30,13 +31,10 @@ const BoxCart = ({send})=>{
             </div>
             <br />
             <div className="buttonsWrapper">
-              <Link to='/checkout'> <button className="checkout">Ir a checkout</button></Link> 
-              <Link to='/shop'> <button className="keepBuying">Seguir comprando</button></Link> 
+              <Link to='/checkout'> <button type="submit" className="checkout"  disabled id='prueba'>Pagar y realizar pedido</button></Link> 
+              
             </div>
         </div>
-        
-      
     )
-
 }
-export default BoxCart
+export default CheckoutBox

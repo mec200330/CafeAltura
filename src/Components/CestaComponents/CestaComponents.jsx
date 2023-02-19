@@ -11,7 +11,7 @@ const CestaComponents = () => {
     const { productsLength, setFreeSend, freeSend } = useContext(DataContext)
     return (
         <div className="productsCartBox">
-            <h2>Cesta {productsLength} </h2>
+            <h2>Cesta ({productsLength}) </h2>
             <div className="detailsBox">
                 <div className="producTable">
                     <h3>Productos</h3>

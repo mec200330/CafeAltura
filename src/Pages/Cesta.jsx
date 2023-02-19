@@ -1,5 +1,5 @@
 import CestaComponents from "../Components/CestaComponents/CestaComponents"
-import './Cesta.css'
+
 import 'bootstrap/dist/css/bootstrap.css';
 
 

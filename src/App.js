@@ -10,6 +10,7 @@ import Footer from './Components/Footer/Footer';
 import Copyright from './Components/Copyrigth/Copyrigth';
 import DataProvider from './Context/DataContext';
 import Cesta from './Pages/Cesta';
+import Checkout from './Pages/Checkout';
 
 
 
@@ -27,6 +28,7 @@ function App() {
          <Route path='/' element={<Home/>}/>
          <Route path='/shop' element={<Shop/>}/>
          <Route path='/cesta' element={<Cesta/>}/>
+         <Route path='/checkout' element={<Checkout/>}/>
          </Routes>
          <Footer/>
          <Copyright/>

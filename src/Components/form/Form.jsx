@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Bottom from "../bottom/Bottom"
+
 import './Form.css'
 
 const Form = ()=>{

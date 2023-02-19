@@ -25,6 +25,7 @@
 }
 .bottom4:hover{
     background-color: #2A5B45;
+    
 
 }
 
@@ -32,4 +33,34 @@
     
     width: 219.39px;
     height: 219.39px;
+}
+.test6{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: white;
+    height: 391.39px;
+    width: 282px;
+    align-items: center;
+    justify-content:center;
+    padding: 24px;
+    gap: 24px;
+    border: 1px solid #E3DED7;
+    box-sizing: border-box;
+    margin-left: 24px;
+    margin-right: 10px;
+    transition: 0s;
+    opacity: 0.5;
+}
+.bottom3{
+    width: 147px;
+    height: 16px;
+    text-decoration: none;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
 }

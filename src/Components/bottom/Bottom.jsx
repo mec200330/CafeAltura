@@ -3,7 +3,7 @@ const Bottom =(props)=>{
     
 
     return(
-        <button onClick={props.comprar} className={props.clasebotton}>{props.nombrebotton}</button>
+        <button disabled={props.estado} onClick={props.comprar} className={props.clasebotton}>{props.nombrebotton}</button>
     )
 }
 

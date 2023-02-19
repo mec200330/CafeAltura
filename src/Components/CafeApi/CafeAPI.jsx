@@ -3,12 +3,14 @@ import './CafeApi.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import { useContext } from "react";
 import { DataContext } from "../../Context/DataContext";
+import Loading from "../Loading/Loading";
+
 
 
 
 const CafeAPI = (props) => {
 const {coffe, fetching, cart, setCart}= useContext (DataContext)
-
+coffe.sort((x, y) => x.price - y.price, 0)
 const buyProducts = (add) =>{
 
    const coffeeObj = {
@@ -22,6 +24,7 @@ const repeat = cart.some((repeatProduct)=> repeatProduct._id === coffeeObj._id)
 console.log(repeat); 
 if(repeat){
     cart.map((prod)=>{
+        
         if(prod._id===coffeeObj._id){
             prod.quantity++
         }
@@ -38,7 +41,7 @@ console.log(cart);
 return(
 
     <div className="bagcoffe row">
-{fetching && 'Loading'} 
+{fetching && <Loading/>} 
 {isShortened && coffe.map((coff)=>{
    
 if (coff.price===9 && coff.available === true){
@@ -54,7 +57,9 @@ if (coff.price===9 && coff.available === true){
     )
 }
 })}
+
 {!isShortened && coffe.map((coff)=>{
+     if(coff.available)
      
     return( 
         <article className='col test1'key={coff._id}>
@@ -64,6 +69,23 @@ if (coff.price===9 && coff.available === true){
          <Bottom  comprar={()=>buyProducts(coff)} clasebotton='bottom4' nombrebotton='Añadir'></Bottom>
         </article>
     )
+
+})}
+
+{!isShortened && coffe.map((coff)=>{
+if (coff.available === false){
+    return (
+        <article className='test6 col'key={coff._id} >
+          <img  src={coff.img_url}/>         
+         <a className='bottom3' >{coff.brand}</a>
+         <p>{coff.price.toFixed(2)}€</p>
+        
+       <Bottom estado comprar={()=>buyProducts(coff)} clasebotton='bottom4' nombrebotton='Agotado' ></Bottom> 
+         
+         </article>
+    )
+   }
+
 
 })}
 

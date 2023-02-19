@@ -8,6 +8,9 @@ const CartElements = ()=>{
     
     
     return cart.map((coff)=>{
+
+
+
         let sumar = ()=>{
         console.log('aqui');
         coff.quantity++
