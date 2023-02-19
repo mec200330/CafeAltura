@@ -2,7 +2,8 @@ import Bottom from "../bottom/Bottom";
 import './CafeApi.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import { useContext } from "react";
-import { DataContext } from "../Context/DataContext";
+import { DataContext } from "../../Context/DataContext";
+
 
 
 const CafeAPI = (props) => {

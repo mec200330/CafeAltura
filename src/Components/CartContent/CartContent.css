@@ -1,0 +1,34 @@
+.shoppingCartsShow{
+    display: flex;
+    display: block;
+    position: fixed;
+   
+}
+.shoppingCarts{
+    
+    display: none;
+    
+}
+.tramitar{
+    font-family: 'Outfit';
+font-style: normal;
+text-decoration: none;
+font-weight: 400;
+    font-size: 23.4628px;
+    color: #2A5B45;
+}
+.tramitar h5:hover{
+    color: #2A5B45;
+}
+.delete-product{
+    cursor: pointer;
+    color: #000;
+   text-decoration: solid;
+    font-weight: 900;
+    font-size: 12px;
+}
+.total{
+    display: flex;
+    color: #2A5B45;
+    gap: 2px;
+}

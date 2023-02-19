@@ -6,9 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Shop from './Pages/Shop';
 import NavBar from './Components/NavBar/NavBar';
 import CartContent from './Components/CartContent/CartContent';
-import DataProvider from './Components/Context/DataContext';
 import Footer from './Components/Footer/Footer';
 import Copyright from './Components/Copyrigth/Copyrigth';
+import DataProvider from './Context/DataContext';
+import Cesta from './Pages/Cesta';
 
 
 
@@ -20,10 +21,12 @@ function App() {
         
         <DataProvider>
          <NavBar/>
+         
+         <CartContent/>
          <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/shop' element={<Shop/>}/>
-         <Route path='/cart'element={<CartContent/>}/>
+         <Route path='/cesta' element={<Cesta/>}/>
          </Routes>
          <Footer/>
          <Copyright/>

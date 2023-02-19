@@ -1,80 +1,21 @@
-// import {Link} from  'react-router-dom'
+
 import Bottom from '../bottom/Bottom'
 import Logo from '../../Assets/image/taza cafe.png'
 import Iconphone from '../../Assets/image/IconIcon phone.png'
 import CarIcon from '../../Assets/image/Carr.png'
-// import './NavBar.css'
-
-// const NavBar = (props) => {
-
-//     return (
-
-//         <header >
-//             <article className='init'>
-//                 <Link to={'/'} id='link'>
-//                     cafedealtura.com
-//                 </Link>
-//                 <article className='cup'>
-//                     <img src={TazaCafe} alt={props.altIcon} className='icon' />
-//                 </article>
-//             </article>
-
-//             <article className='menu'>
-
-//                 <Link to={'/Shop'} className='store'>
-//                     Tienda
-//                 </Link>
-//                 <a href={props.href} className='Sus'>Suscripcion</a>
-//                 <a href={props.href} className='business'>Para empresas</a>
-//                 <a href={props.href} className='Us'>Sobre nosotros</a>
-//                 <a href={props.href} className='cont'>Contacto</a>
-//             </article>
-
-//             <article>
-//                 <div className='service'>
-//                     <article className='link-button'>
-//                         <picture>
-//                             <img src={IconPhone} alt={props.altPhoneIcon} id='phone' />
-//                         </picture>
-//                         <a href={props.href} className='number'>+34 919 49 05 18</a>
-//                     </article>
-
-//                     <article className='button'>
-//                         <Bottom clasebotton='btn-star' nombrebotton='Iniciar Sesión' />
-//                     </article>
-//                 </div>
-//             </article>
-
-//             <article className='car'>
-//                 <div>
-//                   <Link to={'cart'}>  <img src={CarIcon} id='' alt={props.carBuyName} />  </Link>  
-//                 </div>
-//             </article>
-//         </header>
-//     )
-
-
-// }
-
-// export default NavBar
-
-
 import { Link} from "react-router-dom"
-// import Button from '../Button/Button'
-// import Cart from "../Cart/Cart"
-// import Logo from "../../assets/img/coffeCup.png"
-// import Iconphone from "../../assets/img/Iconphone.png"
-// import Carr from "../../assets/img/Carr.png"
 import './NavBar.css'
-// import { DataContext } from "../../context/DataContext"
-// import { useContext } from "react"
+import { DataContext } from '../../Context/DataContext'
+import { useContext } from 'react'
+
 
 const Navbar = () => {
-//     const { showCart, setShowCart, addItemToCart, cartItems, productsLength } = useContext(DataContext)
+    const { productsLength, setShowCart, showCart } = useContext(DataContext)
 
-//     const toogleShowCart = () => {
-//         setShowCart(!showCart)
-//     }
+    const toogleShowCart = () => {
+        console.log(showCart);
+        setShowCart(!showCart)
+    }
 
     return (
         <nav className="navBar">
@@ -101,11 +42,11 @@ const Navbar = () => {
             </article>
             <div className="shopingCarIcon">
                 <div>
-                   <Link  to='/cart'> <img className="cart" src={CarIcon} alt="Carrito de compras" /></Link> 
+                   <img onClick={()=>toogleShowCart()} className="cart" src={CarIcon} alt="Carrito de compras" />
                 </div>
-                {/* <div className="count-product">
+                <div className="count-product">
                     <p>{productsLength}</p>
-                </div> */}
+                </div>
             </div>
         </nav >
     )
