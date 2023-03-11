@@ -31,7 +31,7 @@ const CheckoutBox =({send})=>{
             </div>
             <br />
             <div className="buttonsWrapper">
-              <Link to='/checkout'> <button type="submit" className="checkout"  disabled id='prueba'>Pagar y realizar pedido</button></Link> 
+              <Link to=''> <button type="submit" className="checkout"  disabled id='prueba'>Pagar y realizar pedido</button></Link> 
               
             </div>
         </div>

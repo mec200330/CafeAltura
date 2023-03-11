@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 const Cesta =()=>{
-return(
-<div >
-<CestaComponents/>
-</div>
+    return(
+        <div >
+            <CestaComponents/>
+        </div>
 
-)
+    )
 
 
 }

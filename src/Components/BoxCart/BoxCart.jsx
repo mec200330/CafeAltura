@@ -17,7 +17,7 @@ const BoxCart = ({send})=>{
                 </div>
                 <div className="subTotalDetails">
                     <p className="subtotalTitle">ENVÍO</p>
-                    <p className="subtotalAmount shippingAmount"><span>{send===0 ? 'GRATIS' : freeSend.toFixed(2)}</span></p>
+                    <p className="subtotalAmount shippingAmount"><span>{send===0 ? 'GRATIS' : (freeSend.toFixed(2))}</span></p>
                 </div>
                 <hr />
                 <div className="detailOfTotal">
@@ -30,7 +30,7 @@ const BoxCart = ({send})=>{
             </div>
             <br />
             <div className="buttonsWrapper">
-              <Link to='/checkout'> <button className="checkout">Ir a checkout</button></Link> 
+              <Link to=''> <button className="checkout">Ir a checkout</button></Link> 
               <Link to='/shop'> <button className="keepBuying">Seguir comprando</button></Link> 
             </div>
         </div>
